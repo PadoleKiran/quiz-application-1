@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
-public class MainFile extends AddQuestion {
+public class MainFile{
     public static void main(String[] args) {
         // QuestionPrinter.questionlistprint();
+        QuestionPrinter questionprinter = new QuestionPrinter();
+        AddQuestion addquestion = new AddQuestion();
+        
 
         Scanner scanner = new Scanner(System.in);
 
@@ -44,12 +47,12 @@ public class MainFile extends AddQuestion {
         switch(press){
             case 1: 
                 System.out.println("You are in Quiz");
-                QuestionPrinter.questionlistprint();
+                questionprinter.questionlistprint();
                 // quiz.questionquiz();
                 break;
             case 2:
                 System.out.println("You are admin Add your Question");
-                AddQuestion.addQuestion();
+                addquestion.addQuestion();
                 break;
             case 3: 
                 System.out.println("Good Bye");
@@ -83,10 +86,6 @@ public class MainFile extends AddQuestion {
         //scanner.close();
         }
 
-        
-
-
-        
     }
 }
 
