@@ -6,7 +6,11 @@ public class QuestionsList {
         {"3", "Which planet is known as the Red Planet?", "Earth", "Venus", "Mars", "Jupiter", "Mars"}
     };
 
-    static int questionCount = questions.length;
+    public static int questionCount(){
+        return questions.length;
+    }
+
+    
     public static void addNewQuestion(String[] newQuestion) {
         String[][] newQuestionsArray = new String[questions.length + 1][];
         

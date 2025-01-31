@@ -8,8 +8,10 @@ public class AddQuestion extends QuestionPrinter {
     //         System.out.println(q[1]); // Print question text
 
     static void addQuestion() { 
+
     Scanner scanner = new Scanner(System.in);
 
+        int numCount = 1;
         System.out.println("--------------------------------------------------------------------------------");
         System.out.print("Enter Your quesstion : ");
         String question = scanner.nextLine();
@@ -29,9 +31,13 @@ public class AddQuestion extends QuestionPrinter {
         System.out.print("Enter correct option : ");
         String correctOption = scanner.nextLine();
 
-        String count =String.valueOf(questionCount + 1); 
+        // String count =String.valueOf(questionCount + numCount); 
+        // String questionCount = (String) questions.length;
+        String count =  String.valueOf(questionCount() + 1);
+        
         System.out.println("--------------------------------------------------------------------------------");
 
+        
         QuestionsList.addNewQuestion(new String[]{count, question, option1, option2, option3, option4, correctOption});
         
         // Printing all questions
